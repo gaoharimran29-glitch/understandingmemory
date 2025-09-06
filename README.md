@@ -1,4 +1,4 @@
-# README Notes on C Memory & Data Concepts
+# Notes on C Memory & Data Concepts
 
 ## 1. Hexadecimal Representation in C  
 - Hexadecimal is a number system with **base 16**.  
