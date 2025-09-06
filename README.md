@@ -28,7 +28,7 @@
 | 14      | 1110   | E           |
 | 15      | 1111   | F           |
 
-[Binaryconversion](memoryimages/binaryconversion.png)
+![Binaryconversion](memoryimages/binaryconversion.png)
 
 ---
 
@@ -51,7 +51,7 @@
 - Each memory cell has a unique address that increases sequentially.  
 - For example, if one cell has address `0x5000`, the next one will be `0x5001`.  
 - Multi-byte data types occupy consecutive cells (e.g., an `int` may use 4 cells).  
-    [Memorycell](memoryimages/memorycell.png)
+    ![Memorycell](memoryimages/memorycell.png)
 ---
 
 ## 4. Residence Memory  
@@ -59,7 +59,7 @@
 - RAM is divided into extended memory and residence memory.  
 - Turbo C and older compilers mainly use this residence memory for storing program instructions and data.  
 - It is directly addressable using 20-bit physical addresses (`0x00000` to `0xFFFFF`).  
-   [Residencememory](memoryimages/residencememory.png)
+   ![Residencememory](memoryimages/residencememory.png)
 ---
 
 ## 5. Addressable Memory  
@@ -74,10 +74,10 @@
 ## 6. Segmentation  
 - Residence memory is divided into **segments** to simplify addressing.  
 - Each segment is **64 KB in size**, and there are 16 such segments in a 1 MB memory model.
-    [segementdivision](memoryimages/segmentdivision.png)
+    ![segementdivision](memoryimages/segmentdivision.png)
 - Different segments are used for different purposes, e.g., one for BIOS, another for ROM, another for program data.  
 - Segmentation allows logical division and easier access to memory.  
-    [segmentation](memoryimages/segmentation.png)
+    ![segmentation](memoryimages/segmentation.png)
 ---
 
 ## 7. Offset Address  
@@ -98,7 +98,7 @@
   3. **Heap Area** – used for dynamic memory allocation.  
   4. **Code Area** – contains program instructions.  
 - This organization allows efficient management of different types of data.  
-   [Datasegment](memoryimages/datasegment.png)
+   ![Datasegment](memoryimages/datasegment.png)
 ---
 
 ## 9. Stack Area  
@@ -143,17 +143,16 @@
 - This classification helps organize memory usage and define different kinds of variables.  
 - Choosing the right data type optimizes both performance and memory consumption.  
 
-   [Datatypes](memoryimages/datatypesinc.png)
+   ![Datatypes](memoryimages/datatypesinc.png)
 ---
 
 ## 14. Pointers in C  
+- A pointer in C is a variable that stores the memory address of another variable instead of directly storing a value.
 - **Near Pointer:** 16-bit pointer, limited to 64 KB, used within a single segment.  
 - **Far Pointer:** 32-bit pointer with segment + offset. It can theoretically access all memory but is cyclic within a segment.  
-- **Huge Pointer:** 32-bit pointer that is normalized to absolute memory addresses and can span across memory segments.  
-- Each type of pointer has trade-offs in speed and memory reach.  
 - Huge pointers are useful in large applications, while near pointers are faster but limited in scope.
   
-  [nearpointer](memoryimages/nearpointer.png)
+  ![nearpointer](memoryimages/nearpointer.png)
 ---
 
 ## Memory Map in C++  
@@ -164,4 +163,4 @@
 - Stack grows downward, while Heap grows upward in memory.  
 - This memory model ensures organized program execution and efficient resource management.  
 
-[Memorymapinc++](memoryimages/memorymap.png)
+![Memorymapinc](memoryimages/memorymap.jpg)
